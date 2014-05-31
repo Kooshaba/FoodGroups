@@ -4,4 +4,12 @@
       {{> message}}
     {{/each}}
   </div>
+  {{#if currentUser}}
+    <div class="new-message">
+      <form>
+        <input type="text" class="new-message-input" />
+        <input type="submit" placeholder="Say hello...">
+      </form>
+    </div>
+  {{/if}}
 </template>

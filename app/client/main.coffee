@@ -1,2 +1,3 @@
-thing = (x) ->
-  x * 2
+Accounts.ui.config {
+  passwordSignupFields: 'USERNAME_AND_EMAIL'
+}
