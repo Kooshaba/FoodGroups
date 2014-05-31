@@ -1,7 +1,5 @@
 {
   "packages": {
-    "sass": {},
-    "iron-router": {},
     "bootstrap-3": {}
   }
 }

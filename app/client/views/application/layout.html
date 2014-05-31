@@ -1,12 +1,18 @@
 <template name="layout">
   <div class="container">
-    <header class="navbar">
-      <div class="navbar-inner">
+    <header class="navbar navbar-default">
+      <div class="navbar-brand">FoodGroups</div>
+      <div class="">
         {{> loginButtons align="right"}}
       </div>
     </header>
     <div id="main" class="row-fluid">
-      {{> messagesList}}
+      <div class="col-sm-4">
+        {{> messagesList}}
+      </div>
+      <div class="col-sm-4">
+        {{> foodItems}}
+      </div>
     </div>
   </div>
 </template>

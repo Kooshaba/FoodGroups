@@ -1,0 +1,10 @@
+<template name="foodItems">
+  <h3>Food Items</h3>
+  <div class="food-items">
+    {{#each items}}
+      <div class="item">
+        {{> item}}
+      </div>
+    {{/each}}
+  </div>
+</template>
