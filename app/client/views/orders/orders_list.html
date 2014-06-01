@@ -1,10 +1,12 @@
 <template name="ordersList">
-  <div class="orders-list">
-    {{#each orders}}
-      <div class="order-item">
-        {{> orderItem}}
-      </div>
-    {{/each}}
-  </div>
-  {{> newOrder}}
+  {{#if currentUser}}
+    <div class="orders-list">
+      {{#each orders}}
+        <div class="order-item">
+          {{> orderItem}}
+        </div>
+      {{/each}}
+    </div>
+    {{> newOrder}}
+  {{/if}}
 </template>

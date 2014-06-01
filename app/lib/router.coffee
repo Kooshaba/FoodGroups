@@ -15,11 +15,11 @@ Router.map ->
   }
   @route 'orderShow', {
     path: '/order/:_id'
-    Session.set('order_id', @params._id)
     data: ->
-      Orders.findOne({_id: @params._id})
+      Orders.findOne _id: @params._id
     waitOn: ->
       Meteor.subscribe 'orders', Meteor.userId()
-      Meteor.subscribe 'messages', Session.get('order_id')
+      Meteor.subscribe 'messages', @params._id
       Meteor.subscribe 'users'
+      Session.set 'order_id', @params._id
   }

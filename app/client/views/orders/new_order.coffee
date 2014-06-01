@@ -7,6 +7,7 @@ Template.newOrder.events
       name: name.val()
       owner_id: Meteor.userId()
       members: [{user_id: Meteor.userId()}]
+      state: 0
     name.val('')
 
 

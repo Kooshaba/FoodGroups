@@ -1,7 +1,7 @@
 <template name="orderShow">    
   <div class="row-fluid">
-    <form class="add_member">
-      <input type="text" placeholder="username" />
+    <form class="add-member">
+      <input type="text" class="new-username" placeholder="username" />
       <submit class="btn btn-primary">add member</submit>
     </form>
     <h1>Order: {{name}}</h1>
@@ -12,11 +12,15 @@
     <div class="col-sm-4">
       {{> messagesList}}
     </div>
-    <div class="col-sm-4">
-      {{> restaurants}}
-    </div>
-    <div class="col-sm-4">
-      {{> foodItems}}
+    <div class="col-sm-8">
+      {{#if incomplete}}
+        {{#if voting}}
+          {{> restaurants}}
+        {{/if}}
+        {{#if selecting}}
+          {{> foodItems}}
+        {{/if}}
+      {{/if}}  
     </div>
   </div>
 </template>
