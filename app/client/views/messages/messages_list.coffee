@@ -12,9 +12,8 @@ Template.messagesList.events
     
     Messages.insert 
       user_id: Meteor.userId()
-      user:  Meteor.user()['username']
       body: message
-      order_id: 1
+      order_id: Session.get('order_id')
     
     $('.new-message-input').val ''
     $('.messages').animate { scrollTop: $('.messages')[0].scrollHeight}, 100

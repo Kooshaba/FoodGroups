@@ -1,0 +1,22 @@
+<template name="orderShow">    
+  <div class="row-fluid">
+    <form class="add_member">
+      <input type="text" placeholder="username" />
+      <submit class="btn btn-primary">add member</submit>
+    </form>
+    <h1>Order: {{name}}</h1>
+    <ul>
+<!--       {{#each order.members}}
+      {{/each}} -->
+    </ul>
+    <div class="col-sm-4">
+      {{> messagesList}}
+    </div>
+    <div class="col-sm-4">
+      {{> restaurants}}
+    </div>
+    <div class="col-sm-4">
+      {{> foodItems}}
+    </div>
+  </div>
+</template>
