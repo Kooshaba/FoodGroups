@@ -1,26 +1,42 @@
 <template name="orderShow">    
-  <div class="row-fluid">
-    <form class="add-member">
-      <input type="text" class="new-username" placeholder="username" />
-      <submit class="btn btn-primary">add member</submit>
-    </form>
-    <h1>Order: {{name}}</h1>
-    <ul>
-<!--       {{#each order.members}}
-      {{/each}} -->
-    </ul>
-    <div class="col-sm-4">
-      {{> messagesList}}
+    <div class="row">
+      <div class ="col-sm-6">
+        {{notice}}
+        <form class="add-member">
+          <input type="text" class="new-username" placeholder="username" />
+          <input type="submit" class="btn" value="add" />
+        </form>
+<!--         {{> membersList}}
+        <ul>
+          {{#each order.members}}
+          {{/each}}
+        </ul> -->
+      </div>
     </div>
-    <div class="col-sm-8">
-      {{#if incomplete}}
-        {{#if voting}}
-          {{> restaurants}}
-        {{/if}}
-        {{#if selecting}}
-          {{> foodItems}}
-        {{/if}}
-      {{/if}}  
-    </div>
-  </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <h1>{{name}}</h1>
+        <p>
+          {{#if owner}}
+            (Owner)
+          {{/if}}
+        </p>
+        {{> messagesList}}
+      </div>
+        {{#if incomplete}}
+          {{#if voting}}
+            <div class="col-sm-8">
+              {{> restaurants}}
+            </div>
+          {{/if}}
+          {{#if selecting}}
+            <div class="col-sm-4">
+              {{> foodItems}}
+            </div>
+            <div class="col-sm-4">
+              {{> receipt}}
+            </div>
+          {{/if}}
+        {{/if}}  
+      </div>
 </template>

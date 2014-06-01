@@ -12,6 +12,7 @@ Template.messagesList.events
     
     Messages.insert 
       user_id: Meteor.userId()
+      username: Meteor.user().username
       body: message
       order_id: Session.get('order_id')
     

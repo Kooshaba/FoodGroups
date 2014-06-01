@@ -1,7 +1,7 @@
 <template name="item">
   <ul>
     <li>{{name}}</li>
-    <li>{{price}}</li>
+    <li>${{price}}</li>
   </ul>
-  <button class="btn btn-danger">add</button>
+  <button class="btn btn-danger add-item" data-item-id="{{_id}}" data-price="{{price}}" data-name="{{name}}">add</button>
 </template>

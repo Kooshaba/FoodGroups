@@ -1,5 +1,6 @@
 <template name="restaurant">
-  <div class="restaurant">
-    {{name}} {{category}} {{rating}}
+  <div class="restaurant {{_id}}">
+    {{name}} {{category}} {{rating}} <br>Votes:{{votes}}
   </div>
+  <input type="radio" name="vote" data-id="{{_id}}" />
 </template>

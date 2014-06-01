@@ -7,12 +7,6 @@ Router.map ->
     waitOn: ->
       Meteor.subscribe 'orders', Meteor.userId()
   }
-  @route 'messagesList', {
-    path: '/messages'
-    waitOn: ->
-      Meteor.subscribe 'messages'
-      Meteor.subscribe 'users'
-  }
   @route 'orderShow', {
     path: '/order/:_id'
     data: ->
@@ -22,4 +16,5 @@ Router.map ->
       Meteor.subscribe 'messages', @params._id
       Meteor.subscribe 'users'
       Session.set 'order_id', @params._id
+      Session.set 'notice', ''
   }

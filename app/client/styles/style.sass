@@ -1,16 +1,79 @@
+$primary-color: #B9121B;
+$lighter-color: lighten(#B9121B, 25%);
+$darker-color: darken(#B9121B, 20%);
+$light-grey: #ccc; 
+
 body {
-  background: green;
-  color: pink;
+  background: white;
+  color: $lighter-color;
+}
+  
+a {
+  color: $darker-color;  
 }
 
+a:hover {
+  color: $primary-color;  
+}
+  
+.navbar-brand {
+  color: white;
+}
+  
+.navbar {
+  padding: 10px;
+  padding-right: 25px;
+  border-radius: 0;
+  background: $lighter-color;
+  border-bottom: 2px $light-grey solid;
+  .accounts-dialog {
+    width: 275px;  
+    color: $darker-color;
+    .login-close-text {
+      color: $darker-color;
+    }
+    .login-button {
+      background: $primary-color!important;
+      border-color: $darker-color;
+    }
+    .additional-link-container {
+      color: $darker-color;  
+    }
+  }
+}
+  
+.bold {
+  font-weight: bold;  
+}
+  
+.btn {
+  background: $primary-color!important;
+  border-color: $darker-color!important;
+  color: white;
+}
+   
+.btn:hover {
+  background: $lighter-color;  
+}
+  
 .login-buttons-dropdown-align-right {
-  margin-top: 5px;  
   float: right;
 }
 
+span.input-group-addon {
+  border-top-left-radius: 0px;
+}
+  
+input.form-control {
+  border-top-right-radius: 0px;  
+}
+    
 .messages {
-  border: 1px solid black;
+  border: 1px solid $light-grey;
   border-radius: 15px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: none;
   padding: 10px;
   height: 150px;
   overflow-y: scroll;

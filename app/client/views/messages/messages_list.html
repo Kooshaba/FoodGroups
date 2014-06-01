@@ -7,8 +7,10 @@
   {{#if currentUser}}
     <div class="new-message">
       <form>
-        <input type="text" placeholder="Say hello..." class="new-message-input" />
-        <input type="submit" class="btn btn-success">
+        <div class="input-group">
+          <span class="input-group-addon">></span>
+          <input type="text" class="new-message-input form-control" placeholder="Speak your mind...">
+        </div>
       </form>
     </div>
   {{/if}}

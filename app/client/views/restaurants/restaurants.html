@@ -1,7 +1,12 @@
 <template name="restaurants">
   <div class="restaurants">
-    {{#each restaurants}}
-      {{> restaurant}}
-    {{/each}}
+    <form action="submit" class="restaurant-vote">
+      {{#each restaurants}}
+        {{> restaurant}}
+      {{/each}}
+      {{#if not_voted}}
+        <input type="submit" value="Vote!" />
+      {{/if}}
+    </form>
   </div>
 </template>

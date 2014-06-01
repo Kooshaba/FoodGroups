@@ -1,11 +1,11 @@
 <template name="layout">
+  <header class="navbar">
+    <a href="{{pathFor 'ordersList'}}" class="navbar-brand ">FoodGroups</a>
+    <div class="">
+      {{> loginButtons align="right"}}
+    </div>
+  </header>
   <div class="container">
-    <header class="navbar navbar-default">
-      <a href="{{pathFor 'ordersList'}}" class="navbar-brand">FoodGroups</a>
-      <div class="">
-        {{> loginButtons align="right"}}
-      </div>
-    </header>
     <div class="yield">
       {{> yield}}
     </div>
