@@ -1,17 +1,17 @@
 @foodItems = [
   {
-    name: 'Peas'
-    price: 4.00
+    name: 'Sesame Chicken'
+    price: 5.99
     _id: "0"
   }
   {
-    name: 'Carrots'
-    price: 3.00
+    name: 'Kung Pao Beef'
+    price: 6.99
     _id: "1"
   }
   {
-    name: 'Steak'
-    price: 24.00
+    name: 'Shrimp with Lobster Sauce'
+    price: 7.39
     _id: "2"
   }
 ]

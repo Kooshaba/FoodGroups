@@ -2,7 +2,7 @@
   {{#if currentUser}}
     <div class="orders-list">
       {{#each orders}}
-        <div class="order-item">
+        <div class="order-item state{{state}}">
           {{> orderItem}}
         </div>
       {{/each}}

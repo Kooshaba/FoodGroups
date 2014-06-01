@@ -1,7 +1,10 @@
 $primary-color: #B9121B;
 $lighter-color: lighten(#B9121B, 25%);
 $darker-color: darken(#B9121B, 20%);
-$light-grey: #ccc; 
+$light-grey: #ccc;
+$primary: #428bca;
+$success: #5cb85c;
+$warning: #f0ad4e;
 
 body {
   background: white;
@@ -16,8 +19,41 @@ a:hover {
   color: $primary-color;  
 }
   
+.order-item {
+  a:hover {
+    text-decoration: none;
+    color: $darker-color;
+  }
+  font-size: 3.5em;
+  border: 3px $darker-color solid;
+  padding: 10px;
+  background: $lighter-color;
+  margin-bottom: 5px;
+}
+
+.order-item.state2 {
+  background: $success;
+}
+
+.order-item:hover {
+  background: white;  
+}
+    
+.item, .receipt-item {
+  font-size: 2em;
+  color: white;
+  border: 2px $darker-color solid;
+  padding: 5px;
+  background: $lighter-color;
+  margin-bottom: 3px;
+  .btn {
+    float: right;  
+  }
+}
+  
 .navbar-brand {
   color: white;
+  size: 3em;
 }
   
 .navbar {
@@ -70,11 +106,11 @@ input.form-control {
     
 .messages {
   border: 1px solid $light-grey;
-  border-radius: 15px;
+  border-radius: 5px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
   border-bottom: none;
   padding: 10px;
-  height: 150px;
+  height: 200px;
   overflow-y: scroll;
 }

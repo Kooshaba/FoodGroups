@@ -3,8 +3,8 @@
       <div class ="col-sm-6">
         {{notice}}
         <form class="add-member">
-          <input type="text" class="new-username" placeholder="username" />
-          <input type="submit" class="btn" value="add" />
+          <input type="text" class="new-username" placeholder="Add a user..." />
+          <input type="submit" class="btn" value="Add" />
         </form>
 <!--         {{> membersList}}
         <ul>
@@ -26,6 +26,7 @@
         {{#if incomplete}}
           {{#if voting}}
             <div class="col-sm-8">
+              <h1>Where do you want to eat from?</h1>
               {{> restaurants}}
             </div>
           {{/if}}

@@ -7,6 +7,7 @@ Template.item.events
     name = $(e.currentTarget).data 'name'
     price = $(e.currentTarget).data('price')
     receipt.push
+      user_id: Meteor.userId()
       username: Meteor.user().username
       name: name
       price: price

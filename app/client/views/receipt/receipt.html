@@ -1,7 +1,15 @@
 <template name="receipt">
+  <h1>Group Order</h1>
+  <form class="ready-form">
+    <label>
+      <input type="checkbox" class="ready-checkbox" /> ready!
+    </label>
+  </form>
   <div class="receipt">
     {{#each receipt}}
       {{> receiptItem}}
     {{/each}}
   </div>
+  My price: {{personal_total}} <br />
+  Group Total: {{group_total}} <br />
 </template>
