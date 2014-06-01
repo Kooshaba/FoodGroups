@@ -1,5 +1,6 @@
-Router.configure {
+Router.configure
   layoutTemplate: 'layout'
-}
+
 Router.map -> 
-  @route 'messagesList', {path: '/'}
+  @route 'ordersList', path: '/'
+  @route 'messagesList', path: '/messages'

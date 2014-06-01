@@ -1,0 +1,10 @@
+<template name="ordersList">
+  <div class="orders-list">
+    <button class="btn btn-warning">New Order</button>
+    {{#each orders}}
+      <div class="order-item">
+        {{> orderItem}}
+      </div>
+    {{/each}}
+  </div>
+</template>
